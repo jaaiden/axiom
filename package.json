@@ -1,0 +1,32 @@
+{
+  "name": "Axiom",
+  "version": "1.0.0",
+  "description": "A minimal YouTube audio player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zackdevine/axiom.git"
+  },
+  "keywords": [
+    "Axiom",
+    "YouTube",
+    "audio",
+    "player"
+  ],
+  "author": "Zack Devine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zackdevine/axiom/issues"
+  },
+  "homepage": "https://github.com/zackdevine/axiom#readme",
+  "devDependencies": {
+    "electron": "^1.3.4",
+    "ytdl-core": "^0.7.17"
+  },
+  "dependencies": {
+    "soundcloud-audio": "^1.1.0"
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Axiom</title>
+
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">
+  </head>
+  <body style="padding-top:10px;padding-bottom: 50px;">
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Axiom</a>
+        </div>
+    
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="navbar-text">Marshmello - Alone</li>
+          </ul>
+
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search library">
+            </div>
+            <button type="submit" class="btn btn-default"><i class="fa fa-fw fa-search"></i></button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text" id="songtime"><span id="song-currenttime">1:24</span>/<span id="song-totaltime">4:34</span></li>
+            <li>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary navbar-btn" id="play-button"><i class="fa fa-fw fa-play"></i></a>
+                <a href="#" class="btn btn-primary navbar-btn" id="pause-button" disabled><i class="fa fa-fw fa-pause"></i></a>
+                <a href="#" class="btn btn-danger navbar-btn" id="stop-button"><i class="fa fa-fw fa-stop"></i></a>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-default navbar-btn" id="volup-button"><i class="fa fa-fw fa-volume-down"></i></a>
+                <a href="#" class="btn btn-default navbar-btn" id="voldn-button"><i class="fa fa-fw fa-volume-up"></i></a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- <audio id="audiostream" src="https://youtube.com/watch?v=Lba5LK0A8tw" autoplay="true" controls="true"></audio> -->
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#library">Library</a></li>
+          <li><a href="#playlists">Playlists</a></li>
+        </ul>
+
+        <div class="list-group" id="library">
+          
+          <a class="list-group-item" href="#" id="song" data-videoid="fHCPAii7DeE">
+            <h4 class="media-heading list-group-item-heading">Alan Walker - Faded (Refly Dubstep Remix)</h4>
+            <p class="list-group-item-text">Uploaded by AirwaveMusicTV<br>Length: 2:49</p>
+          </a>
+
+          <a class="list-group-item" href="#" id="song" data-videoid="Lba5LK0A8tw">
+            <h4 class="media-heading list-group-item-heading"><i class="fa fa-fw fa-play"></i> Marshmello - Alone</h4>
+            <p class="list-group-item-text">Uploaded by AirwaveMusicTV<br>Length: 4:34</p>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      window.$ = window.jQuery =require('./assets/js/jquery.min.js')
+    </script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      var baseUrl = "https://www.youtube.com/watch?v="
+
+      $("#song").each(function() {
+        $(this).click(function(){
+          var videoid = $(this).data("videoid")
+          console.log("Playing video ID " + videoid + " (" + baseUrl + videoid + ").")
+        })
+      })
+    </script>
+  </body>
+</html>
